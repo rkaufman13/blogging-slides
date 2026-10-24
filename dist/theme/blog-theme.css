@@ -308,4 +308,16 @@ font-size: 0.6em;
   display:grid;grid-template-columns:1fr 1fr; column-gap:20px;
 }
 
+.reveal .container-3-col {
+  width:130%;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr; column-gap:20px;
+  position:absolute;
+  left:-180px;
+}
+
 .reveal .container-2-col .container-child {text-align:left;}
+
+
+
+.reveal .container-3-col div img {width:100%;}
