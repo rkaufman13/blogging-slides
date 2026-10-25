@@ -15,7 +15,7 @@
   --cw-white: #ffffff;
 
   --cw-display-font: 'Share Tech', 'Oxanium', sans-serif;
-  --cw-mono-font: 'Share Tech Mono', monospace;
+  --cw-mono-font: 'ui-monospace', monospace;
   --cw-body-font: 'Lato', sans-serif;
 
   --cw-chamfer: 30px; /* size of the cut corner on cards */
@@ -109,6 +109,19 @@
 .reveal code,
 .reveal pre {
   font-family: var(--r-code-font);
+  font-size:2rem;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal pre code.smaller {
+  font-size:1rem;
 }
 
 .reveal blockquote {

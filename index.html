@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="dist/theme/blog-theme.css">
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="plugin/highlight/androidstudio.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -181,16 +181,63 @@
 	</li>
 </ol>
 				</section>
+				<section>
+					<div class="r-stack" style="width:100%;grid-template-rows: 50%;position:absolute;left:-100px">
+							<img src="assets/testbed-4.png" class="fragment fade-out" data-fragment-index="0" style="width:100%">
+							<img src="assets/testbed-5.png" class="fragment fade-in-then-out" data-fragment-index="0" style="width:100%">
+							<img src="assets/testbed-6.png" class="fragment fade-in-then-out" data-fragment-index="1" style="width:100%">
+							<img src="assets/testbed-2.png" class="fragment" data-fragment-index="2" style="width:100%">
+						</div>
+					
+				</section>
+				<section>
+					<pre><code language="yaml">---
+layout: post
+title: "Hello, world"
+categories: housekeeping
+excerpt_separator: <!--more-->
+description: Welcome to my new blog!
+---
+
+First post, first time using Jekyll!
+
+					</code></pre>
+				</section>
+				<section>
+					<pre><code language="html" class="smaller"><article class="post" itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include date.html date=page.date %}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}{% if page.categories != empty or page.tags != empty %}{% include category_links.html categories=page.categories tags=page.tags %}{% endif %}</p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+    {% assign category = page.categories[0] %}
+    {% assign items = site.posts | where: "categories",category | where_exp: "item", "item.title!=page.title" |
+       sample: 3 %}
+	   <div class="related-posts">
+        <h3>Related posts:</h3>
+       <ul>
+    {% for post in items %}
+	<li><a href="{{post.url}}"> {{post.title}}</a></li>
+      {%endfor%}
+    </ul>
+  </div>
+</article>
+					</code></pre>
+				</section>
+				<section><pre><code class="smaller" language="bash">[rachel@pop-os rkaufman13-mysite (main)]$ bundle exec jekyll build</code></pre></section>
+				<section><img src="assets/hello-world.png" style="width:100%"></section>
 				<section >
 <h2>My opinionated recommendations</h2>
 <ol class="cards">
 	<li>Self-hosted static site
-		<ul class="small fragment"><li>Jekyll</li>
+		<ul class="fragment"><li>Jekyll</li>
 		<li>Hugo</li>
 	<li>11ty</li></ul>
 	</li>
 	<li>Hosted platforms
-		<ul class="small fragment"><li>Dev.to</li>
+		<ul class="fragment"><li>Dev.to</li>
 		<li>Medium</li>
 	<li>Bear blog</li></ul>
 	</li>
