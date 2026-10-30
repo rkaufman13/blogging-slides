@@ -254,6 +254,7 @@ font-size: 0.6em;
   display: flex;
   align-items: baseline;
   flex-direction: column;
+  flex: 1 1 0px;
   height: 50vh;
   gap: 1.5em;
   padding: 1em 1.5em;
@@ -269,13 +270,6 @@ font-size: 0.6em;
   );
 }
 
-/* .reveal ol.cards > li::before {
-  content: counter(cw-card);
-  min-width: 1em;
-  font-family: var(--cw-display-font);
-  font-size: 1.3em;
-  color: var(--cw-navy-400);
-} */
 
 .reveal .blockquote {
     min-height: 100%;
@@ -334,3 +328,36 @@ font-size: 0.6em;
 
 
 .reveal .container-3-col div img {width:100%;}
+
+.reveal #photocredits {
+  font-size:2rem;
+}
+
+#photocredits h3{
+  font-family: var(--cw-mono-font);
+}
+
+.reveal .overlay {
+  position:absolute;
+  right:2%;
+  bottom: 2%;
+  background-color: var(--cw-navy-700);
+  color: var(--cw-blue-200);
+   clip-path: polygon(
+    var(--cw-chamfer) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--cw-chamfer)
+  );
+ padding: 0.3em 0.3em;
+
+}
+
+.emph {
+  font-family: var(--cw-mono-font);
+  font-size:1em;
+  font-weight:bolder
+}
+
+.reveal .footnote {text-align:left;font-size:30px;line-height:27px;color:var(--cw-blue-200)}

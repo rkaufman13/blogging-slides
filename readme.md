@@ -27,7 +27,13 @@ If you plan on setting up a blog from scratch, try one of these easy tutorials t
 - medium.com
 - bearblog.dev
 
-### Doteki 
+### Images and icons
+
+- [Photo and image database](https://docs.google.com/spreadsheets/d/e/2PACX-1vSgGctthvtBgbpkFhVYuNIwkBSb6GLcNd3D7jjXzUMDVY8L6XBospGXdVXmwTiG3KTPcYVyZ6tE9jcJ/pubhtml)
+- [The Noun Project](https://thenounproject.com/)
+- [Mermaid.live for diagramming](https://mermaid.live/)
+
+### Doteki
 
 This software makes it easy to create a dynamic Github profile. It doesn't only hook into your new blog's RSS feed, but its ability to do that is one of its coolest features (in my opinion).
 
